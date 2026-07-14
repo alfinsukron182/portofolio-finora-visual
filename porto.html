@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FINORA - Creative Photography</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'poppins extra bold', sans-serif;
+            background: linear-gradient(135deg, #02598b, #b3a700);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* LOADING SCREEN */
+        #loader {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(135deg, #02598b, #57009e);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            flex-direction: column;
+        }
+
+        #loader h1 {
+            letter-spacing: 8px;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.3; }
+            50% { opacity: 1; }
+            100% { opacity: 0.3; }
+        }
+
+        /* KONTEN UTAMA */
+        .content {
+            display: none;
+            padding: 120px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 50px;
+            letter-spacing: 8px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 30px;
+            background: #ffcc00;
+            color: black;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- LOADING SCREEN -->
+    <div id="loader">
+        <h1>FINORA</h1>
+        <p>Loading...</p>
+    </div>
+
+    <!-- WEBSITE -->
+    <div class="content" id="mainContent">
+        <h1>FINORA</h1>
+        <p>Creative & Modern Photography</p>
+        <a href="webporto.html" class="btn">Open Now</a>
+    </div>
+
+    <script>
+        window.addEventListener("load", function() {
+            setTimeout(function() {
+                document.getElementById("loader").style.display = "none";
+                document.getElementById("mainContent").style.display = "block";
+            }, 2500);
+        });
+    </script>
+
+</body>
+</html>
